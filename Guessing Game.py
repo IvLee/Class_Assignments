@@ -42,10 +42,11 @@ def game():
                 print('You did this in {} tries!'.format(attempt+1))
                 time.sleep(1)
                 print('Brag to all of your friends!')
-                return
+                ask()
 
         print('Too Bad! You went over the max amount of attempts!')
         print('Better luck next time!')
+        ask()
 
 
 
