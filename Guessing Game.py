@@ -18,7 +18,7 @@ def game():
             if guess > 10 or guess < 1:
                 print('OUT OF BOUNDS!!!!')
                 print('Cold, Cold, Freezing COLD!')
-                print('Game Replayed.')
+                print('Game Reset.')
                 game()
 
             elif guess == (secret_number-1) or guess == (secret_number+1):
@@ -30,23 +30,28 @@ def game():
 
             elif guess == secret_number:
                 print('Congrats on choosing the correct answer!!!')
-                time.sleep(0.5)
+                time.sleep(1)
                 print('You did this in {} tries!'.format(attempt+1))
-                time.sleep(0.5)
+                time.sleep(1)
                 print('Brag to all of your friends!')
+                return
 
-            attempt + 1
+        print('Too Bad! You went over the max amount of attempts!')
+        print('Better luck next time!')
+
 
     except :
         print("Error")
+        time.sleep(1)
+        print('Game Reset.')
+        time.sleep(1)
         game()
 
 game()
-print('Too Bad! You went over the max amount of attempts!')
-print('Better luck next time!')
-ask = input('Want to try again?')
+ask = input('Want to try again? ')
 if ask.lower() == "yes":
     game()
 else:
     print('OK, Goodbye!')
+
 
