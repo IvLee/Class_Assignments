@@ -1,23 +1,52 @@
 import random
+import time
 
-attempts = 3
-secret_number = random.randint(1, 10)
+print("Welcome to the Guessing Game!")
+time.sleep(1)
+print("You only have 3 attempts!")
+time.sleep(1)
+def game():
+    attempts = 3
+    secret_number = random.randint(1, 10)
+    print (secret_number)
+    try :
+        for attempt in range(attempts):
+            print('This is attempt {}!'.format(attempt+1))
+            time.sleep(1)
+            guess = int(input('Take a guess between 1-10: '))
 
-try :
-    for attempt in range(attempts):
+            if guess > 10 or guess < 1:
+                print('OUT OF BOUNDS!!!!')
+                print('Cold, Cold, Freezing COLD!')
+                print('Game Replayed.')
+                game()
 
-        guess = float(input('Take a guess: '))
+            elif guess == (secret_number-1) or guess == (secret_number+1):
+                print('Hot')
+            elif guess == (secret_number-2) or guess == (secret_number+2):
+                print('Warm')
+            elif guess < (secret_number-2) or guess > (secret_number+2) :
+                print('Cold')
 
-        if guess == (secret_number-1) or guess == (secret_number+1):
-                    print('Hot')
-        elif guess == (secret_number-2) or guess == (secret_number+2):
-                    print('Warm')
-        else:
-            print()
-            print('You guessed it! The number was', secret_number)
-            print('You guessed it in', attempts, 'attempts')
+            elif guess == secret_number:
+                print('Congrats on choosing the correct answer!!!')
+                time.sleep(0.5)
+                print('You did this in {} tries!'.format(attempt+1))
+                time.sleep(0.5)
+                print('Brag to all of your friends!')
 
-        print('Sorry you reached the maximum number of tries')
-        print('The secret number was', secret_number)
-except :
-    print("Error")
+            attempt + 1
+
+    except :
+        print("Error")
+        game()
+
+game()
+print('Too Bad! You went over the max amount of attempts!')
+print('Better luck next time!')
+ask = input('Want to try again?')
+if ask.lower() == "yes":
+    game()
+else:
+    print('OK, Goodbye!')
+
