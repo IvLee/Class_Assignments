@@ -46,7 +46,7 @@ def game():
 
         print('Too Bad! You went over the max amount of attempts!')
         print('Better luck next time!')
-        ask()
+
 
 
     except :
