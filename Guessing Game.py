@@ -5,6 +5,14 @@ print("Welcome to the Guessing Game!")
 time.sleep(1)
 print("You only have 3 attempts!")
 time.sleep(1)
+
+def ask():
+    ask = input('Want to try again? ')
+    if ask.lower() == "yes":
+        game()
+    else:
+        print('OK, Goodbye!')
+
 def game():
     attempts = 3
     secret_number = random.randint(1, 10)
@@ -38,6 +46,7 @@ def game():
 
         print('Too Bad! You went over the max amount of attempts!')
         print('Better luck next time!')
+        ask()
 
 
     except :
@@ -48,10 +57,6 @@ def game():
         game()
 
 game()
-ask = input('Want to try again? ')
-if ask.lower() == "yes":
-    game()
-else:
-    print('OK, Goodbye!')
+ask()
 
 
