@@ -17,7 +17,7 @@ def main() :
 
         for i in range(len(wordcount)):
             j = wordcount[i]
-            if len(j) >= 3:
+            if 3 <= len(j) <= 8:
                 count += 1
             i += 1
 
