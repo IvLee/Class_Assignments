@@ -21,10 +21,11 @@ def main() :
                 count += 1
             i += 1
 
+        sentences = open(f, 'r').read().count(".")
         average = count/len(wordcount)
         print(wordcount)
         print ('Average is {}'.format(average))
-        print("total stops: ", open(f, 'r').read().count("."))
+        print("Sentences: ", sentences)
         file.close()
 
     except:
