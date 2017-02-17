@@ -21,7 +21,11 @@ def main() :
                 count += 1
             i += 1
 
-        sentences = open(f, 'r').read().count(".")
+        psentences = open(f, 'r').read().count(".")
+        csentences = open(f, 'r').read().count( ",")
+        colpsentences = open(f, 'r').read().count(";")
+        expsentences = open(f, 'r').read().count('!')
+        sentences = psentences + csentences + colpsentences + expsentences
         average = count/len(wordcount)
         print(wordcount)
         print ('Average is {}'.format(average))
