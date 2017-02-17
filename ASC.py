@@ -24,6 +24,7 @@ def main() :
         average = count/len(wordcount)
         print(wordcount)
         print ('Average is {}'.format(average))
+        print("total stops: ", open(f, 'r').read().count("."))
         file.close()
 
     except:
