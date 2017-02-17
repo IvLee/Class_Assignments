@@ -2,17 +2,6 @@ from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 Tk().withdraw()
 
-def askagain():
-    ask = input("Try Again? Input yes or no: ")
-    if ask.lower() == "yes":
-        main()
-    elif ask.lower() == 'no':
-        print("Alright Baby, Miss you.")
-    else:
-        print('Say WhAAAAAAAAAAAAAT?')
-        print('Try again B :')
-        askagain()
-
 def main() :
     wordcount=[]
     count = 0
@@ -33,14 +22,25 @@ def main() :
             i += 1
 
         average = count/len(wordcount)
+        print(wordcount)
         print ('Average is {}'.format(average))
         file.close()
 
     except:
         print("File error")
-        askagain()
+        ask = input("Try Again? Input yes or no: ")
+        if ask.lower() == "yes":
+            main()
+        elif ask.lower() == 'no':
+            print("Alright Baby, Miss you.")
+        else:
+            print('Say WhAAAAAAAAAAAAAT?')
+            print('Try again B :')
+            main()
+
 
 main()
+
 
 
 
