@@ -1,12 +1,22 @@
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 import os, os.path
-
+import time
 Tk().withdraw()
+
+print('Welcome to ASC!')
+time.sleep(1.5)
+print('This program will calculate the average words per sentence in a file.')
+time.sleep(1.5)
+print('Words are classified as 3-5 characters and sentences end with either a ".,:!?:"')
+time.sleep(1.5)
 
 def main() :
     wordcount=[]
     count = 0
+
+    print('Please choose a file: ')
+    time.sleep(1)
 
     f = askopenfilename()
     try :
