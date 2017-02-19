@@ -70,8 +70,9 @@ def savetext(a, b,c):
             f.write('Here are the average word results for {}'.format(c))
             f.write('\nAverage words is {}'.format(a))
             f.write("\nSentences: {}".format(b))
+        print('File saved in {}'.format(filename))
     elif text.lower() == 'no':
-        print('Alright, Goodbye.')
+        print('Results were not saved.')
     else:
         print('Please try again.')
         savetext(a,b)
