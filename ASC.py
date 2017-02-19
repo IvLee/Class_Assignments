@@ -48,8 +48,8 @@ def main() :
             main()
 
 
-    except:
-        print("File not found error")
+    except :
+        print("Error")
         ask = input("Try Again? Input yes or no: ")
         if ask.lower() == "yes":
             main()
@@ -75,7 +75,7 @@ def savetext(a, b,c):
         print('Results were not saved.')
     else:
         print('Please try again.')
-        savetext(a,b)
+        savetext(a,b,c)
 
 
 main()
