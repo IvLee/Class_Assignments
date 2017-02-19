@@ -28,7 +28,7 @@ def main() :
         sentences = psentences + csentences + colpsentences + expsentences
         average = count/len(wordcount)
         print(wordcount)
-        print ('Average is {}'.format(average))
+        print ('Average words is {}'.format(average))
         print("Sentences: ", sentences)
         file.close()
 
