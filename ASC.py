@@ -77,7 +77,7 @@ def savetext(a, b,c):
         name = input('Please enter a name for your results: ')
         filename = os.path.join(prof_path, 'Desktop', '{}.txt'.format(name))
         with open(filename, 'w') as f:
-            f.write('Here are the average word results for {}'.format(c))
+            f.write('Here are the average word results for {}:'.format(c))
             f.write('\nAverage words is {}'.format(a))
             f.write("\nSentences: {}".format(b))
         print('File saved in {}'.format(filename))
