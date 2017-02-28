@@ -40,8 +40,8 @@ def main() :
         qsentences = open(f, 'r').read().count('?')
         colpsentences = open(f, 'r').read().count(":")
         sentences = psentences + csentences + colpsentences + expsentences + semcolpsentences + qsentences
-        average = count/len(wordcount)
-        #print(wordcount)
+        average = count/sentences
+        print(wordcount)
         print ('Average words is {}'.format(average))
         print("Sentences: ", sentences)
         file.close()
