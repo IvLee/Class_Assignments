@@ -8,6 +8,6 @@ def main() :
     elif reply.lower() == "no" :
         print("ok")
     else :
-        print("I'll assume thats a yes.")
+        print("I'll assume that's a yes.")
         main()
 main()

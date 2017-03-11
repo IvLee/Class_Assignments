@@ -67,7 +67,7 @@ def main() :
             print("Alright Baby, Miss you.")
         else:
             print('Say WhAAAAAAAAAAAAAT?')
-            print('Try again B :')
+            print('Try again:')
             main()
 
 def savetext(a, b,c):
